@@ -1,0 +1,20 @@
+{
+  "appId": "com.gravityecho.chamber",
+  "appName": "Gravity Echo",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "android": {
+    "allowMixedContent": true,
+    "captureInput": true,
+    "webContentsDebuggingEnabled": false
+  },
+  "plugins": {
+    "StatusBar": {
+      "overlaysWebView": true,
+      "style": "DARK"
+    }
+  },
+  "server": {
+    "androidScheme": "https"
+  }
+}
