@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#020108">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>Gravity Echo</title>
+  <link rel="stylesheet" href="./src/styles.css">
+</head>
+<body class="native-app">
+  <div id="game-canvas-container"></div>
+
+  <!-- In-Game Sci-Fi Gauntlet Interface -->
+  <div id="native-hud">
+    <!-- Telemetry -->
+    <div class="hud-top-bar">
+      <div class="chamber-id">
+        <span class="label">LOCATION:</span>
+        <span class="val cyan-glow">CHAMBER ECHO-09</span>
+      </div>
+      <div class="resonance-state">
+        <span class="label">SPATIAL ECHO:</span>
+        <span id="stasis-status" class="val magenta-glow">UNLOCKED</span>
+      </div>
+      <div class="pylon-counter">
+        <span class="label">PYLONS REMAINING:</span>
+        <span id="pylons-count" class="val blue-glow">3 / 3</span>
+      </div>
+    </div>
+
+    <!-- Center Reticle -->
+    <div id="reticle-assembly">
+      <div class="reticle-outer"></div>
+      <div class="reticle-inner"></div>
+      <div class="reticle-center"></div>
+      <div id="reticle-readout">READY</div>
+    </div>
+
+    <!-- Momentum Storage Bar -->
+    <div id="kinetic-meter">
+      <div class="meter-title">STORED KINETIC ACCUMULATION</div>
+      <div class="meter-track">
+        <div id="kinetic-fill"></div>
+      </div>
+      <div id="kinetic-numeric">0% IMPULSE</div>
+    </div>
+
+    <!-- Mobile Virtual Joystick & Action Triggers -->
+    <div class="touch-controls-container">
+      <!-- Movement Joystick (Left Thumb) -->
+      <div id="joystick-boundary">
+        <div id="joystick-knob"></div>
+      </div>
+
+      <!-- Action Buttons (Right Thumb) -->
+      <div id="gauntlet-actions">
+        <button id="btn-pulse" class="gauntlet-btn pulse-glow" aria-label="Kinetic Pulse">
+          <span class="btn-subtext">PULSE</span>
+          <span class="btn-maintext">KINETIC</span>
+        </button>
+        <button id="btn-stasis" class="gauntlet-btn stasis-glow" aria-label="Gravity Stasis Lock">
+          <span class="btn-subtext">FREEZE</span>
+          <span class="btn-maintext">STASIS</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Puzzle Directive Message -->
+    <div id="directive-overlay">
+      <p id="directive-text">AIM AT THE GRAVITATIONAL SPHERE. USE [STASIS] TO FREEZE SPACE-TIME, THEN INJECT [KINETIC] PULSES TO SHATTER RESONANCE PYLONS.</p>
+    </div>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
